@@ -43,7 +43,7 @@ header {
     color: white;
     background:
         linear-gradient(90deg, #062c40dd, #062c401c),
-        url("https://images.unsplash.com/photo-1510414842594-a61c69b5ae57")
+        url(border.jpeg)
         center/cover;
 }
 
