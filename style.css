@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f8fa;
+    color: #183b4e;
+}
+
+/* Navbar */
+nav {
+    background: #073b4c;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #65d6e8;
+}
+
+/* Halaman utama */
+header {
+    min-height: 440px;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+    color: white;
+    background:
+        linear-gradient(90deg, #062c40dd, #062c401c),
+        url("https://images.unsplash.com/photo-1510414842594-a61c69b5ae57")
+        center/cover;
+}
+
+.isi {
+    max-width: 550px;
+}
+
+.isi span {
+    background: #168aad;
+    padding: 9px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.isi h1 {
+    font-size: 50px;
+    margin: 22px 0 10px;
+}
+
+.isi h3 {
+    margin-bottom: 15px;
+}
+
+.isi p {
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* Tombol */
+.tombol {
+    display: inline-block;
+    background: #80deea;
+    color: #073b4c;
+    padding: 13px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.tombol:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* Deskripsi */
+#tentang {
+    max-width: 900px;
+    margin: 45px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px #073b4c20;
+}
+
+#tentang h2,
+.wisata h2 {
+    text-align: center;
+    color: #087e9b;
+    margin-bottom: 25px;
+}
+
+#tentang img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+#tentang p {
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* Animasi fade-in */
+.fade-in {
+    opacity: 0;
+    animation: muncul 1.5s ease forwards;
+}
+
+.fade-in:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.fade-in:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes muncul {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Kartu wisata */
+.wisata {
+    text-align: center;
+    padding: 35px 20px;
+    background: #dff3f6;
+}
+
+.kartu {
+    display: inline-block;
+    vertical-align: top;
+    background: white;
+    width: 250px;
+    padding: 25px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px #073b4c20;
+    transition: 0.3s;
+}
+
+.kartu:hover {
+    transform: translateY(-7px);
+}
+
+.kartu div {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.kartu h3 {
+    margin-bottom: 10px;
+    color: #087e9b;
+}
+
+.kartu p {
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background: #073b4c;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 10px 5px 0;
+    }
+
+    .isi h1 {
+        font-size: 38px;
+    }
+
+    header {
+        padding: 60px 7%;
+    }
+
+    #tentang {
+        margin: 20px 12px;
+        padding: 20px;
+    }
+
+    .kartu {
+        width: 90%;
+    }
+}
